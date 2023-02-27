@@ -77,7 +77,7 @@ export default function App() {
       <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="Splash"
+            initialRouteName="Categories"
             screenOptions={{
               headerStyle: styles.appBar,
               headerTintColor: theme.colors.onPrimaryContainer,

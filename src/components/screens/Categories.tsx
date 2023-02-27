@@ -88,26 +88,27 @@ const Categories = ({ navigation }: any) => {
     },
   });
 
-  useEffect(() => {
-    const backAction = () => {
-      Alert.alert("Un instant!", "Voulez vous quitter l'application 🥲?", [
-        {
-          text: "Cancel",
-          onPress: () => null,
-          style: "cancel",
-        },
-        { text: "YES", onPress: () => BackHandler.exitApp() },
-      ]);
-      return true;
-    };
+  // useEffect(() => {
+  //   const backAction = () => {
+  //     Alert.alert("Un instant!", "Voulez vous quitter l'application 🥲?", [
+  //       {
+  //         text: "RESTER",
+  //         onPress: () => null,
+  //         style: "cancel",
+  //       },
+  //       { text: "QUITTER", onPress: () => BackHandler.exitApp() },
+  //     ]);
+  //     return true;
+  //   };
 
-    const backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
-      backAction
-    );
+  //   const backHandler = BackHandler.addEventListener(
+  //     "hardwareBackPress",
+  //     backAction
+  //   );
+  //   console.log(navigation.goBack());
 
-    return () => backHandler.remove();
-  }, []);
+  //   return () => backHandler.remove();
+  // }, []);
 
   return (
     <View style={styles.container}>
